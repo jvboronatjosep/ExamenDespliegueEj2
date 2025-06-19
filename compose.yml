@@ -1,12 +1,12 @@
 services:
   db:
     image: jvboronatjosep/sqldiscos:v2
-    container_name: contenedorMiCine
+    container_name: contenedorDiscosSql
     ports:
       - "3306:3306"
   php:
     image: jvboronatjosep/phpdiscos:v2
-    container_name: contenedorMiApp
+    container_name: contenedorDiscosPhp
     ports:
       - "8080:80"
     depends_on:
@@ -16,7 +16,7 @@ services:
     container_name: contenedorPhpMyAdmin
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: contrasenyaRoot
+      MYSQL_ROOT_PASSWORD: 1234
     ports:
       - "8081:80"
     depends_on:
