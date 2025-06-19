@@ -1,11 +1,11 @@
 services:
   db:
-    image: jvboronatjosep/sqldiscos:v1
+    image: jvboronatjosep/sqldiscos:v2
     container_name: contenedorMiCine
     ports:
       - "3306:3306"
   php:
-    image: rsanzfloridauni/phpdiscos:v1
+    image: jvboronatjosep/phpdiscos:v2
     container_name: contenedorMiApp
     ports:
       - "8080:80"
